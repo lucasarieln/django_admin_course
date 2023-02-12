@@ -1,8 +1,11 @@
-from rest_framework import serializers
+from rest_framework.serializers import ModelSerializer
 from comentarios.models import Comentario
 
 
-class ComentarioSerializer(serializers.ModelSerializer):
+class ComentarioSerializer(ModelSerializer):
     class Meta:
         model = Comentario
-        fields = '__all__'
+        fields = [
+        'id', 'comentario','data',
+        'aprovado', 'usuario'
+        ]
