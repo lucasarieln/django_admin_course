@@ -14,7 +14,7 @@ class PontoTuristico(models.Model):
     recursos = models.ManyToManyField(Recursos) #many to many fields
     comentarios = models.ManyToManyField(Comentario) #many to many fields
     avaliacoes = models.ManyToManyField(Avaliacao) #many to many fields
-    Endereco = models.ForeignKey(
+    endereco = models.ForeignKey(
         Endereco, on_delete=models.CASCADE, null=True, blank=True
         )
 
